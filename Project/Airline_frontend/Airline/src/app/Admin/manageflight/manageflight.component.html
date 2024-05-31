@@ -1,0 +1,51 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>Flight Name</th>
+                        <th>Source</th>
+                        <th>Destination</th>
+                        <th>Arrival Time</th>
+                        <th>Depature time</th>
+                        <th>Price</th>
+                        <th>Total Seats</th>
+                        <th>Action</th>
+                    </tr>
+            
+                </thead>
+                <!--
+                <tr >
+                    <td>Smith</td>
+                    <td>Clerk</td>
+                    <td>$2500.00</td>
+                </tr>
+                -->
+                <tr *ngFor="let flightlist of flight">
+                    <td>{{flightlist.flightName}}</td>
+                    <td>{{flightlist.start_place}}</td>
+                    <td>{{flightlist.endPlace}}</td>
+                    <td>{{flightlist.arrival_time}}</td>
+                    <td>{{flightlist.depature_time}}</td>
+                    <td>{{flightlist.price}}</td>
+                    <td>{{flightlist.noOfSeats}}</td>
+                    
+                    
+                        
+                    <button type="button" class="btn btn-md btn-success" (click)="updateFlight(flightlist.flightId)">Update</button>&nbsp;&nbsp;
+                   
+                    <button type="button" class="btn btn-md btn-danger" (click) = "deleteFlight(flightlist.flightId)">Delete</button>
+                </tr>
+            </table>
+            </div>
+
+            <button class="atu-btn-submit btn btn-info"(click)="SaveFlight()">Add Flight</button>
+
+            <button class="atu-btn-submit btn btn-info"(click)="homepage()" style="margin-left: 30px;">Homepage</button>
+        </div>
+    </div>
+</div>
+

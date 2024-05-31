@@ -1,0 +1,43 @@
+<div class="main-content" style="
+    width: 35%; /* Set the desired width for the box */
+    margin: 0 auto; /* Center the box horizontally */
+    margin-top: 40px;
+    background-image: url('assets/images/menubg2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #a1a1c0;
+    padding: 20px; /* Add padding to create space between content and box border */
+    border: 2px solid #1a1717; /* Add border to create a box effect */
+    border-radius: 20px; /* Optional: Add border-radius for rounded corners */
+">
+
+<div style="padding-right: 12%;">
+    <div class="container my-5 order-container" *ngIf="booking">
+        <h2 class="text-center">Booking Details</h2>
+        <div class="order-details text-center mt-4">
+            <img src="assets/images/pay.jpg" style="height: 80px;"  alt="Pay Image">
+          
+        </div>
+        
+        
+    </div>
+    <p class="text-center"><strong>No Of Seats:</strong> {{ seatstobook }}</p>
+        <p class="text-center"><strong>Total Amount:</strong> {{ amount }}</p>
+    <h3 class="text-center">Click On Payment Method</h3>
+    <div class="container my-5 payment-options" *ngIf="booking">
+        
+        <div class="d-flex justify-content-center">
+             <button class="btn btn-success mx-2 text-center" (click)="redirectToPayment('online')">Online Payment</button>
+            <div class="mx-2"></div>
+            <div class="mx-2"></div>
+            <div class="mx-2"></div>
+            <div class="mx-2"></div>
+           
+        </div>
+    </div>
+    
+    
+</div>
+</div>
+

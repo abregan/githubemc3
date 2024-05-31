@@ -1,0 +1,50 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th> payment_id</th>
+                        <th>nameOnCard</th>
+                        <th>cardNumber</th>
+                        <th>cvv</th>
+                        <th>booking id</th>
+                       
+                       <th> Paid Amount</th>
+                       
+                        
+                    </tr>
+            
+                </thead>
+                
+                <tr *ngFor="let paylist of payment">
+                    <td>{{paylist.payment_id}}</td>
+                    
+                    <td>{{paylist.nameOnCard}}</td>
+                    <td>{{paylist.cardNumber}}</td>
+                    <td>{{paylist.cvv}}</td>
+                    <td>{{paylist.booking.booking_id}}</td>
+                    <!--<<td>{{paylist.flight.flightName}}</td>
+                    td>{{bookinglist.noOfSeats}}</td>-->
+                    <td>{{paylist.paidAmount}}</td>
+                    
+                    
+                
+                    </tr>
+            </table>
+
+            </div>
+                   
+        <button class="atu-btn-submit btn btn-info"(click)="homepage()" style="margin-left: 30px;">Homepage</button>
+
+           
+           
+
+        
+    
+    
+</div>
+</div>
+</div>

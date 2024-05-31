@@ -1,0 +1,58 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>booking_id</th>
+                        <th>booking_date </th>
+                        <th>start_place</th>
+                        <th>destination</th>
+                        <th>Name</th>
+                       
+                       <!-- <th>noOfSeats</th>-->
+                        <th>No Of Seats</th>
+                        <th>amount</th>
+                        <th>flight_id</th>
+                        <!--<th>status</th>-->
+                        
+                    </tr>
+            
+                </thead>
+                
+                <tr *ngFor="let bookinglist of booking">
+                    <td>{{bookinglist.booking_id}}</td>
+                    <td>{{bookinglist.date }}</td>
+                    <td>{{bookinglist.flight.start_place}}</td>
+                    <td>{{bookinglist.flight.endPlace}}</td>
+                    <td>{{bookinglist.userair.username }}</td>
+                    <!--<td>{{bookinglist.passengerAge}}</td>
+                    <td>{{bookinglist.noOfSeats}}</td>-->
+                    <td>{{bookinglist.seatstobook}}</td>
+                    <td>{{bookinglist.amount}}</td>
+                    <td>{{bookinglist.flight.flightId}}</td>
+                   <!--<td>{{bookinglist.status}}</td>-->
+              
+                   <!--
+                   <button type="button" class="btn btn-md btn-success" (click)="updateBooking(bookinglist.booking_id)">Update</button>&nbsp;&nbsp;
+                   
+                    <button type="button" class="btn btn-md btn-danger" (click) = "deleteBooking(bookinglist.booking_id)">Delete</button>
+                    <button class="atu-btn-submit btn btn-info"(click)="pay()" style="margin-left: 30px;">pay</button>
+                -->
+                </tr>
+            </table>
+
+            </div>
+           
+          
+                
+        <button class="atu-btn-submit btn btn-info"(click)="homepage()" style="margin-left: 30px;">Homepage</button>
+        <!--
+       <button class="atu-btn-submit btn btn-info"(click)="pay()" style="margin-left: 30px;">pay</button>-->
+
+    
+        </div>
+
+</div>

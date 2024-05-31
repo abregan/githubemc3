@@ -1,0 +1,63 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>booking_id</th>
+                        <th>booking_date </th>
+                        <th>start_place</th>
+                        <th>destination</th>
+                        <th>Name</th>
+                       
+                       <!-- <th>noOfSeats</th>-->
+                        <th>seats_to_book</th>
+                        <th>amount</th>
+                        <th>flight_id</th>
+                        
+                    </tr>
+            
+                </thead>
+                <tr >
+                    <td>105</td>
+                    <td>2023-12-30</td>
+                    <td>Hyderabad</td>
+                    <td>London</td>
+                    <td>Devika</td>
+                   
+                    
+                    <td>01</td>
+                    <td>5000</td>
+                    <td>101</td>
+                    
+
+
+
+
+                </tr>
+                <tr *ngFor="let bookinglist of booking">
+                    <td>{{bookinglist.booking_id}}</td>
+                    <td>{{bookinglist.date }}</td>
+                    <td>{{bookinglist.flight.start_place}}</td>
+                    <td>{{bookinglist.flight.endPlace}}</td>
+                    <td>{{bookinglist.userair.username }}</td>
+                    <!--<td>{{bookinglist.passengerAge}}</td>
+                    <td>{{bookinglist.noOfSeats}}</td>-->
+                    <td>{{bookinglist.seatstobook}}</td>
+                    <td>{{bookinglist.amount}}</td>
+                    <td>{{bookinglist.flight.flightId}}</td>
+              
+                 
+                </tr>
+            </table>
+
+            </div>
+            <button class="atu-btn-submit btn btn-info"(click)="homepage()" style="margin-left: 30px;">Homepage</button>
+       
+         
+    
+        </div>
+
+</div>

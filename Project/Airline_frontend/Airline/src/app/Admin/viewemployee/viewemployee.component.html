@@ -1,0 +1,30 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div class="row">
+                <table class='table'>
+                  <thead>
+                      <tr class='table-dark'>
+                          <th>Employee Id</th>
+                          <th>Employee Name</th>
+                          <th>Employee Role</th>
+                          <th>Address</th>
+                         
+                      </tr>
+              
+                  </thead>
+                  <tr *ngFor="let emplist of employeeair">
+                    <td>{{emplist.empid}}</td>
+                    <td>{{emplist.empname}}</td>
+                    <td>{{emplist.emp_role}}</td>
+                    <td>{{emplist.address}}</td>
+                  </tr>
+                </table>
+            </div>
+           
+        </div>
+        <button class="atu-btn-submit btn btn-info"(click)="homepage()" style="margin-left: 30px;">Homepage</button>
+       
+    </div>
+</div>
+

@@ -1,0 +1,65 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <div class="row">
+              <table class='table'>
+                <thead>
+                    <tr class='table-dark'>
+                        <th>flightId</th>
+                        <th>flightName </th>
+                        <th>arrival_time</th>
+                        <th>depature_time</th>
+                        <th>start_place</th>
+                        <th>endPlace</th>
+                        <th>noOfSeats</th>
+                        
+                    </tr>
+            
+                </thead>
+                <tr >
+                    <td>101</td>
+                    <td>Golconda</td>
+                    <td>07:30:00</td>
+                    <td>07:45:00</td>
+                    <td>Warangal</td>
+                    <td>secundrabad</td>
+                    <td>100</td>
+                    
+
+
+
+
+                </tr>
+                <tr *ngFor="let flightlist of flight">
+                    <td>{{flightlist.flightId}}</td>
+                    <td>{{flightlist.flightName }}</td>
+                    <td>{{flightlist.arrival_time}}</td>
+                    <td>{{flightlist.depature_time}}</td>
+                    <td>{{flightlist.start_place}}</td>
+                    <td>{{flightlist.endPlace}}</td>
+                    <td>{{flightlist.noOfSeats}}</td>
+                
+                   <button type="button" class="btn btn-md btn-success" (click)="AddBooking(flightlist.flightId)">Book</button>&nbsp;&nbsp;
+                   
+                    <!--<button type="button" class="btn btn-md btn-danger" (click) = "deleteUser(userlist.userid)">Delete</button>-->
+                </tr>
+            </table>
+       
+
+            </div>
+        
+           
+           
+
+        
+    
+    
+</div>
+<div>
+                  
+<button class="atu-btn-submit btn btn-info"(click)="homepage()" style="margin-left: 30px;">Homepage</button>
+
+</div>
+</div>
+</div>
